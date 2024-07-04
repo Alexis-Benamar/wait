@@ -1,16 +1,11 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+
+import Header from 'components/Header'
 
 const Root = () => {
   return (
     <main>
-      <hgroup style={{ border: 'none', marginTop: 30 }}>
-        <h1 className="centered" style={{ border: 'none' }}>
-          <Link to="/" style={{ color: 'var(--default)', textDecoration: 'none' }}>
-            wait 🤔
-          </Link>
-        </h1>
-        <p className="centered">This is a collection of handy tools, helpers and (more or less) usefull stuff.</p>
-      </hgroup>
+      <Header />
       <Outlet />
     </main>
   )
