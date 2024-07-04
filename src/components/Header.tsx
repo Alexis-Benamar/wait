@@ -1,11 +1,13 @@
+import blobThinking from 'assets/blob-thinking.png'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <hgroup style={{ border: 'none', marginTop: 30 }}>
       <h1 className="centered" style={{ border: 'none' }}>
-        <Link to="/" style={{ color: 'var(--default)', textDecoration: 'none' }}>
-          wait 🤔
+        <Link to="/" className="flex center align-center" style={{ color: 'var(--default)', textDecoration: 'none' }}>
+          <span>wait </span>
+          <img src={blobThinking} style={{ margin: 0, marginLeft: 15 }} height={40} width={40} />
         </Link>
       </h1>
       <small className="block centered muted italic" style={{ marginBottom: 10 }}>
