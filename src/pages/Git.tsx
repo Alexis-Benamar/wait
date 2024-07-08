@@ -15,9 +15,7 @@ const Git = () => {
       <PageTitle>git</PageTitle>
       <ul>
         {commands.map((cmd) => (
-          <li style={{ height: 32 }} key={cmd.title}>
-            {cmd.title} : <Command>{cmd.command}</Command>
-          </li>
+          <Command cmd={cmd} />
         ))}
       </ul>
     </section>

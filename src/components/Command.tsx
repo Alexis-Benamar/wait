@@ -1,10 +1,13 @@
-import { ReactNode } from 'react'
+import { CommandType } from 'types/command'
 
-const Command = ({ children }: { children: ReactNode }) => {
+const Command = ({ cmd }: { cmd: CommandType }) => {
   return (
-    <output className="small" style={{ fontFamily: 'var(--ft-mono)', lineHeight: '32px' }}>
-      {children}
-    </output>
+    <li style={{ lineHeight: '32px' }} key={cmd.title}>
+      {cmd.title} :{' '}
+      <output className="small" style={{ fontFamily: 'var(--ft-mono)', lineHeight: '32px' }}>
+        {cmd.command}
+      </output>
+    </li>
   )
 }
 
