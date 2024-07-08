@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   const linksLists = [
     {
+      sectionTitle: 'Calculators',
+      links: [
+        {
+          text: 'weight',
+          url: '/weight',
+        },
+      ],
+    },
+    {
       sectionTitle: 'Commands',
       links: [
         {
