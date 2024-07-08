@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Ffmpeg from 'pages/Ffmpeg'
+import Git from 'pages/Git'
 import Home from 'pages/Home'
 import Root from 'pages/Root'
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: '/ffmpeg', element: <Ffmpeg /> },
+      { path: '/git', element: <Git /> },
     ],
   },
 ])

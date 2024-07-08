@@ -1,8 +1,10 @@
+import { CommandType } from 'types/command'
+
 import Command from 'components/Command'
 import PageTitle from 'components/PageTitle'
 
 const Ffmpeg = () => {
-  const videoCommands = [
+  const videoCommands: CommandType[] = [
     {
       title: 'MOV to MP4',
       command: 'ffmpeg -i <filename>.mov -vcodec h264 -acodec mp2 <filename>.mp4',
