@@ -22,7 +22,7 @@ const Ffmpeg = () => {
         <h3>Video</h3>
         <ul>
           {videoCommands.map((vidCmd) => (
-            <Command cmd={vidCmd} />
+            <Command cmd={vidCmd} key={vidCmd.title} />
           ))}
         </ul>
       </section>
