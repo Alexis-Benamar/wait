@@ -1,0 +1,19 @@
+html {
+  min-height: 100svh;
+}
+
+body, #root {
+  min-height: 100svh
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+#root section {
+  margin-inline: 0;
+  width: 100%;
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <hgroup style={{ border: 'none', marginTop: 30 }}>
+    <hgroup style={{ border: 'none', paddingTop: 30, marginInline: 'auto' }}>
       <h1 className="centered" style={{ border: 'none' }}>
         <Link to="/" className="flex center align-center" style={{ color: 'var(--default)', textDecoration: 'none' }}>
           <span>wait </span>
