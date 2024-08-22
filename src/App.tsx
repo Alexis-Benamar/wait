@@ -12,6 +12,7 @@ import './style.css'
 
 // import Weight from 'pages/Weight'
 
+const Bash = lazy(() => import('pages/Bash'))
 const Ffmpeg = lazy(() => import('pages/Ffmpeg'))
 const Git = lazy(() => import('pages/Git'))
 const Weight = lazy(() => import('pages/Weight'))
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
+      { path: '/bash', element: <Bash /> },
       { path: '/ffmpeg', element: <Ffmpeg /> },
       { path: '/git', element: <Git /> },
       { path: '/weight', element: <Weight /> },

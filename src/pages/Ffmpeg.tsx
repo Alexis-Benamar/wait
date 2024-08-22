@@ -10,6 +10,10 @@ const Ffmpeg = () => {
       command: 'ffmpeg -i <filename>.mov -vcodec h264 -acodec mp2 <filename>.mp4',
     },
     {
+      title: 'MOV to GIF',
+      command: 'ffmpeg -i <filename>.mov -f gif <filename>.gif',
+    },
+    {
       title: 'MP4 to WEBM',
       command: 'ffmpeg -i <filename>.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus <filename>.webm',
     },

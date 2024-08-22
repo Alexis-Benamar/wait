@@ -15,6 +15,10 @@ const Home = () => {
       sectionTitle: 'Commands',
       links: [
         {
+          text: 'bash',
+          url: '/bash',
+        },
+        {
           text: 'git',
           url: '/git',
         },
