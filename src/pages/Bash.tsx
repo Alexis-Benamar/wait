@@ -13,6 +13,10 @@ const Bash = () => {
       title: 'add ssh key to keychain (in .bash_profile / .zprofile)',
       command: 'eval `keychain --eval --agents ssh --inherit any id_ed25519`',
     },
+    {
+      title: 'replace string in file',
+      command: `sed -i 's/<string_to_replace>/<new_string>/g' <filename>`,
+    },
   ]
   return (
     <section>
