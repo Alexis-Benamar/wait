@@ -11,7 +11,7 @@ const Bash = () => {
     },
     {
       title: 'add ssh key to keychain (in .bash_profile / .zprofile)',
-      command: 'eval `keychain --eval --agents ssh --inherit any id_ed25519`',
+      command: 'eval `keychain --eval --agents ssh <path/to/private/key>`',
     },
     {
       title: 'replace string in file',
