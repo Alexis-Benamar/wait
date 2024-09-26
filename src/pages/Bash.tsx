@@ -17,6 +17,18 @@ const Bash = () => {
       title: 'replace string in file',
       command: `sed -i 's/<string_to_replace>/<new_string>/g' <filename>`,
     },
+    {
+      title: 'change file/folder ownership',
+      command: 'chown <-R for recursive> <username> <path-to-file-or-folder>',
+    },
+    {
+      title: 'change file/folder permissions',
+      command: 'chmod <-R for recursive> <permission number> <path-to-file-or-folder>',
+    },
+    {
+      title: 'make file executable',
+      command: 'chmod +x <path-to-file>',
+    },
   ]
   return (
     <section>
