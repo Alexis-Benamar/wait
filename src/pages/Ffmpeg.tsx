@@ -11,7 +11,11 @@ const Ffmpeg = () => {
     },
     {
       title: 'MOV to GIF',
-      command: 'ffmpeg -i <filename>.mov -f gif <filename>.gif',
+      command: 'ffmpeg -i <filename>.mov -f gif -filter_complex "fps=30" <filename>.gif',
+    },
+    {
+      title: 'MP4 to GIF',
+      command: 'ffmpeg -i <filename>.mp4 -f gif -filter_complex "fps=30" <filename>.gif',
     },
     {
       title: 'MP4 to WEBM',
