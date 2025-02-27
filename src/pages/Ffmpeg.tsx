@@ -4,6 +4,13 @@ import Command from 'components/Command'
 import PageTitle from 'components/PageTitle'
 
 const Ffmpeg = () => {
+  const audioCommands: CommandType[] = [
+    {
+      title: 'MP3 to MP4',
+      command: `ffmpeg -loop 1 -i <input_image> -i <input_audio>.mp3 -c:v libx264 -tune stillimage -c:a aac -b:a 192k -vf "scale='iw-mod(iw,2)':'ih-mod(ih,2)',format=yuv420p" -shortest -movflags +faststart <output_filename>.mp4`,
+    },
+  ]
+
   const videoCommands: CommandType[] = [
     {
       title: 'MOV to MP4',
@@ -26,6 +33,14 @@ const Ffmpeg = () => {
   return (
     <section>
       <PageTitle>ffmpeg</PageTitle>
+      <section>
+        <h3>Audio</h3>
+        <ul>
+          {audioCommands.map((audioCmd) => (
+            <Command cmd={audioCmd} key={audioCmd.title} />
+          ))}
+        </ul>
+      </section>
       <section>
         <h3>Video</h3>
         <ul>
