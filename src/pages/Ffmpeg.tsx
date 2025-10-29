@@ -9,6 +9,10 @@ const Ffmpeg = () => {
       title: 'MP3 to MP4',
       command: `ffmpeg -loop 1 -i <input_image> -i <input_audio>.mp3 -c:v libx264 -tune stillimage -c:a aac -b:a 192k -vf "scale='iw-mod(iw,2)':'ih-mod(ih,2)',format=yuv420p" -shortest -movflags +faststart <output_filename>.mp4`,
     },
+    {
+      title: 'MP3 to OGG',
+      command: `ffmpeg -y -i <filename.mp3> -c:a libopus -b:a 64k -ac 2 <filename>.ogg`,
+    },
   ]
 
   const videoCommands: CommandType[] = [
