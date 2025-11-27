@@ -17,3 +17,12 @@ body, #root {
   margin-inline: 0;
   width: 100%;
 }
+
+.clearable-input {
+  display: flex;
+  align-items: center;
+
+  * {
+    margin-block: .25rem;
+  }
+}

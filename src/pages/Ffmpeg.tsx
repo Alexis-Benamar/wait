@@ -51,7 +51,10 @@ const Ffmpeg = () => {
       <PageTitle>ffmpeg</PageTitle>
       <label>
         filename:
-        <input onChange={(e) => setTypedFileName(e.target.value)} value={typedFileName} />
+        <div className="clearable-input">
+          <input onChange={(e) => setTypedFileName(e.target.value)} value={typedFileName} />
+          {typedFileName.length > 0 ? <button onClick={() => setTypedFileName('')}>X</button> : null}
+        </div>
       </label>
       <section>
         <h3>Audio</h3>
